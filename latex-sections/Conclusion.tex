@@ -1,0 +1,13 @@
+\section{Conclusion}
+
+
+This project focused on the development of a machine learning model capable of distinguishing cardiac arrhythmias from normal electrocardiogram (ECG) signals. The primary aim was to build a reliable tool that could assist healthcare professionals in the diagnosis of arrhythmias, potentially leading to improved patient outcomes.
+
+This project has successfully trained, compared two models and creatively identified popular deep learning model, Bidirectional Encoder Representations from Transformers (BERT), as a powerful tool. Models were trained and tested using the widely-used MIT-BIH Arrhythmia Database, which contains ECG recordings from a diverse range of patients with various cardiac conditions. A model was optimized using a random forest algorithm, which resulted in a high accuracy rate of 98.45\% in identifying arrhythmias. And the other model was optimized using BERT model, with 87\% accuracy rate. 
+
+The BERT model is typically pre-trained on vast amounts of unlabeled text data to acquire comprehensive language representations. As a future work for this project, the model could be to adapt for pre-training to predict the next value in a sequence of ECG data, similar to its training on text data, before it is fine-tuned with a classification layer. We expect this approach would greatly improve the accuracy of the BERT model.
+
+Another approach that might also improve the result for BERT model is to convert each heart beat into a sequence of fixed-length numerical vectors, which can be fed into the BERT model as input. This approach is known as sequence embedding and might have several advantages over the resampling of voltage against time, such as preserving more information about the signal and reducing the amount of preprocessing required. It can be done using techniques like sliding window segmentation, where the ECG signal is divided into overlapping windows of fixed length, and each window is converted into a vector using features like the amplitude (voltage), duration, and shape of the waveform. 
+
+The findings of this project have important implications for the field of cardiology and healthcare in general. The development of an accurate and reliable machine learning model for the classification of arrhythmia has the potential to significantly improve patient outcomes. It can also help healthcare professionals to make more informed decisions when it comes to treatment plans and improve the overall quality of care.
+

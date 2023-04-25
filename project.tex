@@ -1,4 +1,4 @@
-% Author - Jon Arnt Kårstad, NTNU IMT
+% Author - Qishu Dong, CHenjie Wu, Haoran Zhang
 \documentclass{article}
 
 % Importing document settings from our file "packages.sty"
@@ -17,8 +17,8 @@
 \tableofcontents
 
 % Inserting list of figures & list of tables
-\listoffigures
-\listoftables
+% \listoffigures
+% \listoftables
 
 % Defining main matter settings (Norsk: innstillinger for hoveddelen av teksten)
 \mainmatter
@@ -27,19 +27,21 @@
 \import{./latex-sections/}{Introduction}
 
 % Example section added from an external tex-file, here located in ./Sections/
-\import{./latex-sections/}{Example_section}
+\import{./latex-sections/}{Background}
 
+\import{./latex-sections/}{Data_analysis_and_preprocessing}
+
+\import{./latex-sections/}{Approach}
+
+\import{./latex-sections/}{Implementation_specifics}
 % Example section added directly into the main-file
-\section{Conclusion}
-\textit{But the fact that some geniuses were laughed at does not imply that all who are laughed at are geniuses. They laughed at Columbus, they laughed at Fulton, they laughed at the Wright Brothers. But they also laughed at Bozo the Clown} -  \textcite{sagan_1993}.
+
+\import{./latex-sections/}{Results}
+\import{./latex-sections/}{Conclusion}
 
 % Printing bibliography
 \newpage
 \printbibliography[heading = bibintoc, title = Bibliography]    % 'bibintoc' inserts our bibliography into the table of contents
-
-% Inserting appendix with separate settings
-\addappendix
-\import{./latex-sections/}{example_appendix}
 
 % End of document
 \end{document}

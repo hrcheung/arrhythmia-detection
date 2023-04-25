@@ -1,0 +1,31 @@
+\section{Approach}
+
+\subsection{Related Work: BERT}
+The pre-trained deep learning model for natural language processing tasks, Bidirectional Encoder Representations from Transformers (BERT), has been able to achieve state-of-the-art performance on diverse benchmarks, according to Devlin et al. (2018). Since its introduction, BERT has been extensively employed in various NLP applications, such as sentiment analysis (Devlin et al., 2019), text classification, question answering, and machine translation. Furthermore, there has been an increasing interest in using BERT for non-NLP tasks, such as image classification and speech recognition, as recent studies have revealed that BERT can be fine-tuned for specific tasks by integrating task-specific input and output layers.
+
+\nocite{BERT}
+
+\subsection{Related Work: Random Forest}
+Random Forest is a popular machine learning algorithm used for classification, regression and feature selection tasks. It is an ensemble learning method that combines multiple decision trees, where each decision tree is built using a subset of the available features and training data. During training, the algorithm randomly selects a subset of the available features for each decision tree, and then uses a random subset of the training data to train each tree. This randomness helps to reduce overfitting and increase the generalizability of the model.
+
+% \nocite{Random_Forest}
+
+\subsection{Modeling}
+
+In our approach, BERT is fine-tuned for the arrhythmia detection. This involves adding a classification layer on top of the pretrained BERT model and training it on labeled ECG data from the MIT-BIH database. The classification layer is trained to predict the presence or absence of arrhythmia in each ECG recording. Here is a more detailed explanation of the different components of the classification layer and the training process:
+
+Dropout layer: A dropout layer is a regularization technique that helps prevent overfitting by randomly dropping out (setting to zero) some of the activations in the preceding layer during training. $10\%$ of the activations will be randomly dropped out during each training iteration.
+
+
+In contrast to the approach used for the BERT model, it seems that for the Random Forest Classifier, the numerical values of the ECG voltage signals are directly used as input features.
+
+
+Linear layer: The linear layer is the final layer in the classification layer, which takes the output of the BERT model and maps it to a binary classification (arrhythmia or no arrhythmia). This layer is typically initialized with random weights and trained using backpropagation to minimize the cross-entropy loss.
+
+Cross-entropy loss: Cross-entropy loss is a commonly used loss function for binary classification problems. It measures the difference between the predicted probabilities and the true labels, and is optimized during training to improve the accuracy of the model.
+
+Adam optimizer: Adam is a popular optimization algorithm for training deep learning models. It uses a combination of adaptive learning rates and momentum to accelerate the training process and improve the convergence of the model.
+
+During training, the labeled heart beat voltages, extracted from the MIT-BIH ECG database, is used to update the weights of the classification layer and fine-tune the BERT model for arrhythmia detection. It is important to note that each heart beat is resampled, normalized, and concatenated into a long sequence of voltages, which can be fed into the pretrained BERT model as input. The training process involves 10 epochs, where each epoch consists of feeding batches of ECG data into the model, computing the loss and gradients, and updating the weights using the optimizer. 
+
+In contrast to the approach used for the BERT model, for the Random Forest Classifier, the numerical values of the ECG voltage signals are directly used as input features. The number of decision trees in a Random Forest Classifier is a hyperparameter that can be tuned during the model training process. Generally, a larger number of trees will increase the accuracy of the model, but also increase the computational complexity and training time. 100 decision trees are used in our approach.
