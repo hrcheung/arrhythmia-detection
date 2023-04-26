@@ -19,15 +19,6 @@
 % Page setup
 % -----------------------
 
-% --- Appendices ---
-\usepackage{appendix}
-\newcommand{\addappendix}{   % Self-created command to insert appendix with predefined settings
-    \newpage
-    \appendix
-    \section*{Appendix}   % Name of appendix
-    \addcontentsline{toc}{section}{Appendix}  % Add appendix name to table of contents
-    \renewcommand{\thesubsection}{\Alph{subsection}}    % Change numbering of section to upper-case letters.
-}
 
 % --- Bibliography & References---  
 \usepackage[backend = biber,    % Recommended backend for sorting bibliography
