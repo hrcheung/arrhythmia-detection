@@ -21,7 +21,7 @@ This project has successfully trained, compared two models and creatively identi
 
 - `Python` is required to run the model. 
 - `Internet` is required to load the data. 
-- `Colab` is an option environment setup.
+- `Colab` is an optional environment setup.
 
 #### How to Reproduce the Result
 
