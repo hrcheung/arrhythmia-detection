@@ -33,7 +33,6 @@ This project has successfully trained, compared two models and creatively identi
 
 ### Other Resources
 - [Presentation slides](https://docs.google.com/presentation/d/1DMAFFwFVI51kP_uvz7dtNAUy-8maEmEhzy5W9C0D0yg/edit#slide=id.p)
-- [Course link](https://course.ccs.neu.edu/cs6220/data-mining/)
 
 
 ## Thanks
